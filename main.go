@@ -11,6 +11,7 @@ func main() {
 
 	router.GET("/.well-known/webfinger", webfinger.GetWebfinger)
 
+	router.GET("/api/v1/instance", instance.GetInstance)
 	router.GET("/api/v1/instance/activity", instance.GetActivity)
 	router.GET("/api/v1/instance/domain_blocks", instance.GetBlocks)
 	router.GET("/api/v1/instance/extended_description", instance.GetDescription)
