@@ -8,5 +8,5 @@ import (
 func main() {
 	router := gin.Default()
 	router.GET("/.well-known/webfinger", webfinger.GetWebfinger)
-	router.Run(":8080")
+	router.Run("localhost:8080")
 }
