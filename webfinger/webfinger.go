@@ -8,7 +8,11 @@ import (
 
 var Users = []string{"test1", "test2"}
 
-func GetWebfinger(c *gin.Context) {
+func RegisterRoutes(r *gin.Engine) {
+	r.GET("/.well-known/webfinger", getWebfinger)
+}
+
+func getWebfinger(c *gin.Context) {
 	query := c.Request.URL.Query()
 	resource, ok := query["resource"]
 

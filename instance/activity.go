@@ -15,7 +15,7 @@ type WeekActivity struct {
 	Registrations string `json:"registrations"`
 }
 
-func GetActivity(c *gin.Context) {
+func getActivity(c *gin.Context) {
 	activity := Activity{WeekActivity{}}
 	c.JSON(http.StatusOK, activity)
 }

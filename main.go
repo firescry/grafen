@@ -16,14 +16,8 @@ func main() {
 	}
 	router.Use(cors.New(config))
 
-	router.GET("/.well-known/webfinger", webfinger.GetWebfinger)
-
-	router.GET("/api/v1/instance", instance.GetInstance)
-	router.GET("/api/v1/instance/activity", instance.GetActivity)
-	router.GET("/api/v1/instance/domain_blocks", instance.GetBlocks)
-	router.GET("/api/v1/instance/extended_description", instance.GetDescription)
-	router.GET("/api/v1/instance/peers", instance.GetPeers)
-	router.GET("/api/v1/instance/rules", instance.GetRules)
+	webfinger.RegisterRoutes(router)
+	instance.RegisterRoutes(router)
 
 	router.Run("localhost:8080")
 }

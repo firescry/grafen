@@ -11,7 +11,7 @@ type Description struct {
 	Content   string `json:"content"`
 }
 
-func GetDescription(c *gin.Context) {
+func getDescription(c *gin.Context) {
 	description := Description{}
 	c.JSON(http.StatusOK, description)
 }

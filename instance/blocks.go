@@ -15,7 +15,7 @@ type Block struct {
 	Comment  string `json:"comment"`
 }
 
-func GetBlocks(c *gin.Context) {
+func getBlocks(c *gin.Context) {
 	blocks := Blocks{Block{}}
 	c.JSON(http.StatusOK, blocks)
 }

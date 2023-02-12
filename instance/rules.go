@@ -13,7 +13,7 @@ type Rule struct {
 	Text string `json:"text"`
 }
 
-func GetRules(c *gin.Context) {
+func getRules(c *gin.Context) {
 	rules := Rules{Rule{}}
 	c.JSON(http.StatusOK, rules)
 }

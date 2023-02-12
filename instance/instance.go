@@ -104,7 +104,7 @@ type Field struct {
 	VerifiedAt int    `json:"verified_at"`
 }
 
-func GetInstance(c *gin.Context) {
+func getInstance(c *gin.Context) {
 	urls := Urls{}
 	stats := Stats{}
 	languages := Languages{}

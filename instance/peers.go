@@ -8,7 +8,7 @@ import (
 
 type Peers []string
 
-func GetPeers(c *gin.Context) {
+func getPeers(c *gin.Context) {
 	peers := Peers{}
 	c.JSON(http.StatusOK, peers)
 }
